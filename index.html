@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Détachement Radical — Le Protocole 14 Jours</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* MASQUER ÉLÉMENTS BLOGGER */
+  .navbar, #navbar, .navbar-inner, .blog-pager, #blog-pager, .post-header, .post-title, .post-footer, #post-footer, .date-header, .post-timestamp, .share-buttons, .post-share-buttons, #sharing-buttons, .byline, .post-labels, .reactions, .comment-link, #comments, .widget, #sidebar, .post-author, .author-name, header.blog-header, .header-outer, .header-inner, #header, #header-wrapper, .header.section, nav, .nav-outer, [id*="share"], [class*="share"], [class*="post-header"], [class*="post-footer"], [class*="byline"], [class*="timestamp"], [class*="author"] { display: none !important; }
+  .post-body, .entry-content, .post-outer, .post, #main, #main-wrapper, .main-inner, .content-outer, .content-inner { padding: 0 !important; margin: 0 !important; max-width: 100% !important; width: 100% !important; background: transparent !important; border: none !important; box-shadow: none !important; }
+
+:root {
+–bg:      #fdf8f2;
+–bg2:     #f5ede0;
+–purple:  #4a2c8a;
+–purple2: #6b3fa0;
+–soft:    #9b6dcc;
+–gold:    #c8973a;
+–gold2:   #e8b84b;
+–dark:    #1e1228;
+–body:    #3d2d5c;
+–muted:   #8a7aaa;
+–white:   #ffffff;
+–border:  rgba(74,44,138,0.12);
+}
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+body {
+background: var(–bg);
+color: var(–body);
+font-family: ‘Nunito’, sans-serif;
+font-weight: 400;
+overflow-x: hidden;
+}
+
+/* TOP BAR */
+.topbar {
+background: var(–purple);
+color: white;
+text-align: center;
+padding: 12px 24px;
+font-size: 0.8rem;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+}
+
+/* HERO */
+header {
+background: linear-gradient(160deg, #fff 0%, #f0e8f8 50%, #fdf4e3 100%);
+border-bottom: 1px solid var(–border);
+padding: 80px 24px 90px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+header::before {
+content: ‘’;
+position: absolute;
+top: -80px; left: 50%;
+transform: translateX(-50%);
+width: 700px; height: 700px;
+background: radial-gradient(ellipse, rgba(155,109,204,0.12) 0%, transparent 70%);
+pointer-events: none;
+}
+
+.badge {
+display: inline-block;
+background: linear-gradient(135deg, var(–purple), var(–purple2));
+color: white;
+font-size: 10px;
+letter-spacing: 3px;
+text-transform: uppercase;
+padding: 7px 20px;
+border-radius: 100px;
+margin-bottom: 36px;
+animation: fadeUp 0.7s ease both;
+}
+
+h1 {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: clamp(2.6rem, 7vw, 5rem);
+font-weight: 600;
+line-height: 1.08;
+letter-spacing: -0.02em;
+color: var(–dark);
+margin-bottom: 16px;
+animation: fadeUp 0.8s ease 0.1s both;
+}
+
+h1 em { font-style: italic; color: var(–purple2); }
+
+.subtitle-hero {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: clamp(1.1rem, 3vw, 1.5rem);
+color: var(–muted);
+font-style: italic;
+margin-bottom: 44px;
+animation: fadeUp 0.9s ease 0.2s both;
+}
+
+.hero-pills {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 12px;
+margin-bottom: 52px;
+animation: fadeUp 1s ease 0.3s both;
+}
+
+.pill {
+display: flex;
+align-items: center;
+gap: 12px;
+background: white;
+border: 1px solid var(–border);
+border-radius: 100px;
+padding: 10px 22px;
+font-size: 0.93rem;
+color: var(–body);
+box-shadow: 0 2px 12px rgba(74,44,138,0.07);
+}
+
+.pill-dot {
+width: 8px; height: 8px;
+border-radius: 50%;
+background: var(–gold2);
+flex-shrink: 0;
+}
+
+.cta-btn {
+display: inline-block;
+background: linear-gradient(135deg, var(–gold) 0%, var(–gold2) 100%);
+color: var(–dark);
+font-family: ‘Nunito’, sans-serif;
+font-weight: 700;
+font-size: 1rem;
+padding: 18px 48px;
+border-radius: 6px;
+text-decoration: none;
+transition: transform 0.2s, box-shadow 0.2s;
+box-shadow: 0 8px 28px rgba(200,151,58,0.35);
+animation: fadeUp 1s ease 0.4s both;
+}
+
+.cta-btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 16px 40px rgba(200,151,58,0.45);
+}
+
+.hero-sub {
+margin-top: 14px;
+font-size: 0.82rem;
+color: var(–muted);
+animation: fadeUp 1s ease 0.5s both;
+}
+
+/* DOULEUR */
+.pain {
+padding: 100px 24px;
+max-width: 700px;
+margin: 0 auto;
+}
+
+.section-label {
+font-size: 10px;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 20px;
+display: block;
+font-weight: 600;
+}
+
+.pain h2 {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: clamp(1.9rem, 5vw, 3rem);
+font-weight: 600;
+line-height: 1.2;
+margin-bottom: 36px;
+color: var(–dark);
+}
+
+.pain h2 em { font-style: italic; color: var(–purple2); }
+
+.pain p {
+font-size: 1.05rem;
+line-height: 1.9;
+color: var(–body);
+margin-bottom: 22px;
+opacity: 0.85;
+}
+
+/* SYMPTOMS */
+.symptoms {
+padding: 80px 24px;
+background: white;
+border-top: 1px solid var(–border);
+border-bottom: 1px solid var(–border);
+}
+
+.symptoms-inner { max-width: 700px; margin: 0 auto; }
+
+.symptoms h2 {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: clamp(1.8rem, 4vw, 2.7rem);
+font-weight: 600;
+margin-bottom: 48px;
+line-height: 1.25;
+color: var(–dark);
+}
+
+.symptom-list { display: flex; flex-direction: column; gap: 16px; }
+
+.symptom-item {
+display: flex;
+align-items: flex-start;
+gap: 20px;
+padding: 22px 24px;
+border: 1px solid var(–border);
+border-radius: 12px;
+background: var(–bg);
+transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.symptom-item:hover {
+border-color: rgba(107,63,160,0.3);
+box-shadow: 0 4px 20px rgba(74,44,138,0.08);
+transform: translateX(4px);
+}
+
+.symptom-num {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.8rem;
+color: var(–gold2);
+min-width: 36px;
+line-height: 1;
+font-weight: 600;
+}
+
+.symptom-text { font-size: 0.97rem; line-height: 1.75; color: var(–body); }
+.symptom-text strong { color: var(–dark); font-weight: 600; }
+
+/* QUOTE */
+.quote-block {
+padding: 90px 24px;
+text-align: center;
+max-width: 640px;
+margin: 0 auto;
+}
+
+.quote-inner {
+background: linear-gradient(135deg, var(–purple) 0%, var(–purple2) 100%);
+border-radius: 20px;
+padding: 56px 48px;
+position: relative;
+overflow: hidden;
+}
+
+.quote-inner::before {
+content: ‘”’;
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 12rem;
+color: rgba(255,255,255,0.07);
+position: absolute;
+top: -20px; left: 20px;
+line-height: 1;
+}
+
+blockquote {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: clamp(1.3rem, 3.5vw, 1.9rem);
+font-weight: 400;
+font-style: italic;
+line-height: 1.5;
+color: white;
+margin-bottom: 20px;
+position: relative;
+z-index: 1;
+}
+
+cite {
+font-size: 0.78rem;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: rgba(255,255,255,0.5);
+}
+
+/* SOLUTION */
+.solution {
+padding: 100px 24px;
+background: var(–bg2);
+border-top: 1px solid var(–border);
+}
+
+.solution-inner { max-width: 700px; margin: 0 auto; }
+
+.solution h2 {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: clamp(1.9rem, 5vw, 3rem);
+font-weight: 600;
+line-height: 1.2;
+margin-bottom: 32px;
+color: var(–dark);
+}
+
+.solution h2 em { font-style: italic; color: var(–gold); }
+
+.solution p {
+font-size: 1.02rem;
+line-height: 1.9;
+color: var(–body);
+margin-bottom: 20px;
+opacity: 0.85;
+}
+
+.protocol-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+margin: 48px 0;
+}
+
+@media (max-width: 540px) { .protocol-grid { grid-template-columns: 1fr; } }
+
+.protocol-card {
+padding: 28px 24px;
+border: 1px solid var(–border);
+border-radius: 14px;
+background: white;
+box-shadow: 0 2px 16px rgba(74,44,138,0.06);
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.protocol-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 32px rgba(74,44,138,0.12);
+}
+
+.protocol-card .day {
+font-size: 9px;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 10px;
+display: block;
+font-weight: 600;
+}
+
+.protocol-card .title {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.25rem;
+color: var(–dark);
+font-weight: 600;
+margin-bottom: 8px;
+}
+
+.protocol-card .desc { font-size: 0.87rem; color: var(–muted); line-height: 1.65; }
+
+/* URGENCE */
+.urgency {
+padding: 80px 24px;
+background: white;
+border-top: 1px solid var(–border);
+border-bottom: 1px solid var(–border);
+}
+
+.urgency-inner { max-width: 660px; margin: 0 auto; text-align: center; }
+
+.urgency h2 {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: clamp(1.8rem, 4vw, 2.8rem);
+font-weight: 600;
+margin-bottom: 24px;
+line-height: 1.25;
+color: var(–dark);
+}
+
+.urgency p {
+font-size: 1.02rem;
+line-height: 1.85;
+color: var(–body);
+margin-bottom: 18px;
+opacity: 0.82;
+}
+
+/* FINAL CTA */
+.final-cta {
+padding: 110px 24px;
+text-align: center;
+background: linear-gradient(160deg, #f0e8f8 0%, #fdf4e3 100%);
+}
+
+.final-cta-inner { max-width: 580px; margin: 0 auto; }
+
+.final-cta h2 {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: clamp(2.2rem, 6vw, 3.8rem);
+font-weight: 600;
+line-height: 1.15;
+margin-bottom: 16px;
+color: var(–dark);
+}
+
+.final-cta h2 em { font-style: italic; color: var(–purple2); }
+
+.final-cta p {
+font-size: 1rem;
+color: var(–muted);
+margin-bottom: 44px;
+line-height: 1.8;
+}
+
+.cta-block { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+
+.cta-main {
+display: inline-block;
+background: linear-gradient(135deg, var(–purple) 0%, var(–purple2) 100%);
+color: white;
+font-family: ‘Nunito’, sans-serif;
+font-weight: 700;
+font-size: 1.05rem;
+padding: 20px 52px;
+border-radius: 8px;
+text-decoration: none;
+transition: transform 0.2s, box-shadow 0.2s;
+box-shadow: 0 8px 32px rgba(74,44,138,0.35);
+width: 100%;
+max-width: 420px;
+text-align: center;
+}
+
+.cta-main:hover {
+transform: translateY(-3px);
+box-shadow: 0 16px 48px rgba(74,44,138,0.45);
+}
+
+.cta-price { font-size: 0.88rem; color: var(–muted); }
+.cta-price strong { color: var(–gold); }
+
+.guarantee {
+margin-top: 28px;
+font-size: 0.82rem;
+color: var(–muted);
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+}
+
+.guarantee::before { content: ‘🔒’; font-size: 0.9rem; }
+
+/* FOOTER */
+footer {
+padding: 40px 24px;
+text-align: center;
+background: var(–dark);
+}
+
+footer p { font-size: 0.78rem; color: rgba(255,255,255,0.3); letter-spacing: 0.5px; }
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(20px); }
+to   { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+opacity: 0;
+transform: translateY(28px);
+transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+
+</head>
+<body>
+
+<div class="topbar">✦ Protocole de détachement émotionnel — Résultats dès le Jour 1 ✦</div>
+
+<header>
+  <span class="badge">Développement émotionnel</span>
+  <h1>Tu attends.<br>Tu t'effaces.<br>Tu <em>souffres.</em></h1>
+  <p class="subtitle-hero">Et tu ne sais même pas pourquoi tu ne peux pas t'arrêter.</p>
+
+  <div class="hero-pills">
+    <div class="pill"><span class="pill-dot"></span>Tu vérifies ton téléphone toutes les 5 minutes</div>
+    <div class="pill"><span class="pill-dot"></span>Ton humeur dépend entièrement du regard des autres</div>
+    <div class="pill"><span class="pill-dot"></span>Tu te sens vide dès que quelqu'un s'éloigne</div>
+  </div>
+
+  <a href="https://sante-mental.mychariow.shop/sortie-de-la-dependance-affective" class="cta-btn">
+    Oui, je me reconnais → Je veux changer
+  </a>
+  <p class="hero-sub">Accès immédiat · Moins de 15€ · Livraison instantanée</p>
+</header>
+
+<section class="pain">
+  <span class="section-label reveal">Ce que tu vis</span>
+  <h2 class="reveal">Ce n'est pas de la <em>sensibilité.</em><br>C'est une dépendance.</h2>
+  <p class="reveal">La dépendance émotionnelle, c'est cette sensation de ne pas exister pleinement sans l'approbation ou la présence d'une autre personne. C'est vivre en mode "attente" permanente.</p>
+  <p class="reveal">Elle ne ressemble pas à une drogue. Elle ressemble à de l'amour. À du soin. À de la générosité. C'est pour ça qu'elle est si difficile à reconnaître — et si difficile à quitter.</p>
+  <p class="reveal">Mais chaque jour que tu passes à dépendre des autres pour te sentir bien, tu t'éloignes un peu plus de toi-même.</p>
+</section>
+
+<section class="symptoms">
+  <div class="symptoms-inner">
+    <h2 class="reveal">Tu te reconnais dans<br>au moins 3 de ces situations ?</h2>
+    <div class="symptom-list">
+      <div class="symptom-item reveal">
+        <span class="symptom-num">01</span>
+        <p class="symptom-text"><strong>Tu vérifies ton téléphone</strong> en espérant un message d'une personne précise. Quand il n'arrive pas, ton humeur s'effondre.</p>
+      </div>
+      <div class="symptom-item reveal">
+        <span class="symptom-num">02</span>
+        <p class="symptom-text"><strong>Tu t'excuses tout le temps,</strong> même quand c'est pas ta faute. Le conflit te terrifie plus que l'injustice.</p>
+      </div>
+      <div class="symptom-item reveal">
+        <span class="symptom-num">03</span>
+        <p class="symptom-text"><strong>Quand quelqu'un te donne moins d'attention,</strong> tu cherches immédiatement ce que tu as mal fait. Alors que lui, il ne pense même pas à toi.</p>
+      </div>
+      <div class="symptom-item reveal">
+        <span class="symptom-num">04</span>
+        <p class="symptom-text"><strong>Tu ne peux pas être seul(e)</strong> avec toi-même. Le silence intérieur devient vite insupportable.</p>
+      </div>
+      <div class="symptom-item reveal">
+        <span class="symptom-num">05</span>
+        <p class="symptom-text"><strong>Tu changes qui tu es</strong> selon la personne en face de toi. Tes goûts, ton humeur, tes opinions — tout s'adapte pour qu'on t'aime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-block reveal">
+  <div class="quote-inner">
+    <blockquote>Tu ne guéris pas en cherchant quelqu'un qui te complète. Tu guéris en réalisant que tu étais entier depuis le début.</blockquote>
+    <cite>— Détachement Radical</cite>
+  </div>
+</section>
+
+<section class="solution">
+  <div class="solution-inner">
+    <span class="section-label reveal">La solution</span>
+    <h2 class="reveal">Le Protocole <em>14 Jours</em> pour arrêter d'avoir besoin des autres pour être heureux.</h2>
+    <p class="reveal">Ce n'est pas un livre de développement personnel de plus. C'est un protocole concret — un exercice par jour, pendant 14 jours — conçu pour casser la dépendance émotionnelle progressivement.</p>
+    <p class="reveal">Il est divisé en deux phases :</p>
+    <div class="protocol-grid">
+      <div class="protocol-card reveal">
+        <span class="day">Jours 1 → 7</span>
+        <div class="title">Phase de sevrage</div>
+        <div class="desc">Tu prends conscience de tes automatismes. Tu coupes les comportements compulsifs. Tu apprivoises l'inconfort.</div>
+      </div>
+      <div class="protocol-card reveal">
+        <span class="day">Jours 8 → 14</span>
+        <div class="title">Phase de reconstruction</div>
+        <div class="desc">Tu bâtis une relation nouvelle avec toi-même. Tu crées de nouveaux ancrages. Tu redeviens ton propre foyer.</div>
+      </div>
+      <div class="protocol-card reveal">
+        <span class="day">Exercices guidés</span>
+        <div class="title">Concret & actionnable</div>
+        <div class="desc">Chaque jour : une intention, un exercice, une réflexion. 20 à 30 minutes. Pas de théorie floue.</div>
+      </div>
+      <div class="protocol-card reveal">
+        <span class="day">Résultat</span>
+        <div class="title">Une liberté réelle</div>
+        <div class="desc">Aimer sans dépendre. Ressentir sans être esclave. Choisir les autres — sans en avoir besoin.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="urgency">
+  <div class="urgency-inner">
+    <h2 class="reveal">Chaque jour sans agir<br>coûte quelque chose.</h2>
+    <p class="reveal">Une relation de plus où tu t'effaces. Une opportunité manquée parce que tu attendais la validation de quelqu'un. Une nuit de plus à ruminer un message qui n'est pas arrivé.</p>
+    <p class="reveal">La dépendance émotionnelle ne disparaît pas toute seule. Elle s'installe. Elle s'approfondit. Et elle finit par définir qui tu es.</p>
+    <p class="reveal">Tu mérites mieux que ça.</p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2 class="reveal">Commence ton<br><em>détachement</em><br>aujourd'hui.</h2>
+    <p class="reveal">14 jours. Un exercice par jour. Une transformation qui commence dès la première page.</p>
+    <div class="cta-block reveal">
+      <a href="https://sante-mental.mychariow.shop/sortie-de-la-dependance-affective" class="cta-main">
+        Je veux me libérer → Accéder à l'ebook
+      </a>
+      <span class="cta-price">Accès immédiat · <strong>Moins de 15€</strong> · Livraison instantanée</span>
+    </div>
+    <p class="guarantee reveal">Téléchargement sécurisé via Chariow</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 · Détachement Radical — Le Protocole 14 Jours</p>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 70);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
